@@ -140,7 +140,7 @@ function parseSRT(srt) {
         } else {
             // Line is the subtitle text
             const cleanText = removeHTMLTags(line); // Remove <i></i> or other HTML tags
-            entry.Text = entry.Text ? `${entry.Text}\n${cleanText}` : cleanText;
+            entry.Text = entry.Text ? `${entry.Text}+" "+${cleanText}` : cleanText;
         }
     });
 
